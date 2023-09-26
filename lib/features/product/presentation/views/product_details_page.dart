@@ -33,7 +33,7 @@ class ProductDetailsPage extends StatelessWidget {
               ),
             ),
           ),
-          const PageBottom(),
+          PageBottom(card: card,),
         ],
       ),
     );

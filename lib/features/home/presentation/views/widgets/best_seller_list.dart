@@ -15,7 +15,7 @@ class HorizontalListView extends StatelessWidget {
 
           scrollDirection: Axis.horizontal,
           itemCount: menu.length,
-          itemBuilder: (context, index) => HorizontalListTile(cart: menu[index]),
+          itemBuilder: (context, index) => HorizontalListTile(card: menu[index]),
         ),
       ),
     );

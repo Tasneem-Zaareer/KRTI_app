@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../../../home/presentation/models/card_model.dart';
 
 class PageBottom extends StatelessWidget {
-  const PageBottom({super.key});
+  const PageBottom({super.key, required this.card});
+  final MyCard card;
 
   @override
   Widget build(BuildContext context) {
@@ -14,30 +18,35 @@ class PageBottom extends StatelessWidget {
           topRight: Radius.circular(0),
         ),
       ),
-      child: const BuyOnAmazonButton(),
+      child: BuyOnAmazonButton(card: card,),
     );
   }
 }
 
 class BuyOnAmazonButton extends StatelessWidget {
   const BuyOnAmazonButton({
-    super.key,
+    super.key, required this.card,
   });
+  final MyCard card;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //height: 100,
-      decoration: BoxDecoration(
-        color: Colors.deepPurple.shade400,
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: GestureDetector(
-        onTap: () {
-          launchURL();
-        },
+    return GestureDetector(
+      onTap: () {
+        //String url = 'https://${card.url}';
+        String url = card.url;
+
+        launchURL3(url);
+        print('Go yalla');
+      },
+      child: Container(
+        //height: 100,
+        decoration: BoxDecoration(
+          color: Colors.deepPurple.shade400,
+          borderRadius: BorderRadius.circular(50),
+        ),
         child: Container(
-           padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(25),
           child: const Center(
             child: Text(
               'Buy Now on Amazon',
@@ -52,10 +61,35 @@ class BuyOnAmazonButton extends StatelessWidget {
       ),
     );
   }
-  void launchURL() {
+
+  Future<void> launchURL3(String url) async {
+    //go to product page on amazon
+    //final url = Uri.parse('https://amzn.to/44YYhj2');
+    final uri = Uri.parse(url);
+    if(await canLaunchUrl(uri)){
+      await launchUrl(uri);
+      //print('done =============');
+    }
 
   }
+  Future<void> launchURL2(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+  Future<void> launchURL(String url) async {
+    final Uri uri = Uri(scheme: "https", host: url);
+    //final Uri uri = Uri(host: url);
 
+    if(!await launchUrl(
+      uri,
+      mode: LaunchMode.externalApplication,
+    )
+    ){
+      throw "Cannot launch url";
+    }
+  }
 }
 
 class Price extends StatelessWidget {

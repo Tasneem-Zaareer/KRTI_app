@@ -5,9 +5,9 @@ import '../../models/card_model.dart';
 import '../../../../product/presentation/views/product_details_page.dart';
 
 class HorizontalListTile extends StatelessWidget {
-  const HorizontalListTile({super.key, required this.cart});
+  const HorizontalListTile({super.key, required this.card});
 
-  final MyCard cart;
+  final MyCard card;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class HorizontalListTile extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return ProductDetailsPage(card: cart,);
+                    return ProductDetailsPage(card: card,);
                   },
                 ),
               );
@@ -35,36 +35,43 @@ class HorizontalListTile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 image: DecorationImage(
                   //fit: BoxFit.fill,
-                  image: NetworkImage(cart.imagePath),
+                  image: NetworkImage(card.imagePath),
                   // image: AssetImage(gift.imagePath),
                 ),
               ),
             ),
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: kPaintingColor,
-            ),
-            onPressed: () {
-             // String url = 'https://amzn.to/44YYhj2';
-              //String url = 'google.com';
-              String url = cart.url;
-
-              //launchURL(url);
-              launchURL3(url);
-              //launchURL2(url);
-
-            },
-            child: Text(
-              'Buy Now',
-              style: TextStyle(color: Colors.grey.shade800),
-            ),
-          )
+            BuyNowButton(card: card),
         ],
       ),
     );
   }
+}
 
+class BuyNowButton extends StatelessWidget {
+  const BuyNowButton({super.key, required this.card});
+  final MyCard card;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: kPaintingColor,
+      ),
+      onPressed: () {
+        String url = card.url;
+        //launchURL(url);
+        launchURL3(url);
+        //launchURL2(url);
+
+      },
+      child: Text(
+        'Buy Now',
+        style: TextStyle(color: Colors.grey.shade800),
+      ),
+    );
+  }
 
   Future<void> launchURL3(String url) async {
     //go to product page on amazon
@@ -83,15 +90,16 @@ class HorizontalListTile extends StatelessWidget {
     }
   }
   Future<void> launchURL(String url) async {
-     //final Uri uri = Uri(scheme: "https", host: url);
+    //final Uri uri = Uri(scheme: "https", host: url);
     final Uri uri = Uri(host: url);
 
     if(!await launchUrl(
       uri,
-     mode: LaunchMode.externalApplication,
+      mode: LaunchMode.externalApplication,
     )
     ){
       throw "Cannot launch url";
     }
   }
 }
+
