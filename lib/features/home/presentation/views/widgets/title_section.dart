@@ -4,10 +4,10 @@ import '../../models/lists/wedding_cart_menu.dart';
 import '../category_items_list.dart';
 
 class TitleSection extends StatelessWidget {
-  const TitleSection({super.key, required this.title});
+  const TitleSection({super.key, required this.title, required this.menu});
 
   final String title;
-
+  final List menu;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,7 +26,7 @@ class TitleSection extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return  CategoryItemsList(menu: weddingCardMenu,);
+                    return  CategoryItemsList(menu: menu,);
                     // return CategoryItemsList(menu: category.giftList,);
                   },
                 ),

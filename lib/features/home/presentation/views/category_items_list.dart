@@ -8,8 +8,6 @@ import 'widgets/category_Items_tile.dart';
 class CategoryItemsList extends StatelessWidget {
   const CategoryItemsList({super.key, required this.menu});
 
-  //final Gift gift;
-  //final Category category;
   final List menu;
 
   @override
