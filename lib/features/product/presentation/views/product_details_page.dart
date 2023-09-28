@@ -22,6 +22,7 @@ class ProductDetailsPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: ListView(
+
                 children: [
                   ProductImage(card: card),
                   const ProductRate(),

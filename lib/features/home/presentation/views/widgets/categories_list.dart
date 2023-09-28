@@ -20,6 +20,7 @@ class CategoriesList extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: List.generate(
           menu.length,
+
               (index) {
             return CategoriesTile(category: menu[index]);
           },

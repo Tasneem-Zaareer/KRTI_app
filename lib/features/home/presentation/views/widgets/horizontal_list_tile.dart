@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../constants.dart';
@@ -27,23 +28,47 @@ class HorizontalListTile extends StatelessWidget {
               );
             },
             child: Container(
-              // width: 200,
               width: MediaQuery.of(context).size.width * .27,
               height: 100,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  //fit: BoxFit.fill,
-                  image: NetworkImage(card.imagePath),
-                  // image: AssetImage(gift.imagePath),
-                ),
-              ),
+              child: MyCachedImage(card: card,),
+              //decoration: BoxDecoration(
+              // color: Colors.yellow,
+              //borderRadius: BorderRadius.circular(12),
+              //image: DecorationImage(
+              //fit: BoxFit.fill,
+              //image: NetworkImage(card.imagePath),
+              // image: AssetImage(gift.imagePath),
+              // ),
+              //),
             ),
           ),
           BuyNowButton(card: card),
         ],
       ),
+    );
+  }
+}
+
+class MyCachedImage extends StatelessWidget {
+  const MyCachedImage({super.key, required this.card});
+  final MyCard card;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return CachedNetworkImage(
+      imageUrl: card.imagePath,
+      imageBuilder: (context, imageProvider) =>
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: imageProvider,
+                //fit: BoxFit.cover,
+              ),
+            ),
+          ),
+      placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+      errorWidget: (context, url, error) => Icon(Icons.error),
     );
   }
 }

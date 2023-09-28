@@ -33,11 +33,5 @@ class ItemsListView extends StatelessWidget {
       ),
     );
   }
-
-  // testFun() {
-  //   print(menu.first);
-  //   print(menu);
-  //   print(menu[0]);
-  //   print(menu.elementAt(0));
-  // }
 }
+
