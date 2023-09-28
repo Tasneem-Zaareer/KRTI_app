@@ -4,11 +4,9 @@ import '../../../../product/presentation/views/product_details_page.dart';
 import '../../models/card_model.dart';
 
 class CategoryItemsTile extends StatelessWidget {
-  const CategoryItemsTile({super.key, required this.menu});
+  const CategoryItemsTile({super.key, required this.card});
 
-  //final Gift gift;
-  // final Category menu;
-  final MyCard menu;
+  final MyCard card;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +18,7 @@ class CategoryItemsTile extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return ProductDetailsPage(card: menu,);
+                  return ProductDetailsPage(card: card,);
                 },
               ),
             );
@@ -34,7 +32,7 @@ class CategoryItemsTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               image: DecorationImage(
                 //fit: BoxFit.fill,
-                image: NetworkImage(menu.imagePath),
+                image: NetworkImage(card.imagePath),
                 // image: AssetImage(category.imagePath),
 
               ),

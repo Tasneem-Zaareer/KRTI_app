@@ -13,14 +13,18 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
-      iconTheme: const IconThemeData(color: kPrimaryColor),
-      title: const Text(
+      iconTheme: IconThemeData(color: kPrimaryColor),
+      title: Text(
         'K R T I',
         style: TextStyle(color: kPrimaryColor),
       ),
       centerTitle: true,
-      actions:  const [
-        AppIconButton(iconButton:  Icons.search,),
+      actions:  [
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0,right: 8),
+          child: Image.asset('assets/images/invitation.png',width: 50,),
+        ),
+        //AppIconButton(iconButton:  Icons.search,),
         //AppIconButton(iconButton:  Icons.info_outline,),
 
         //const SearchSection(),

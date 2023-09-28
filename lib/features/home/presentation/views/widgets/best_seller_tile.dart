@@ -41,7 +41,7 @@ class HorizontalListTile extends StatelessWidget {
               ),
             ),
           ),
-            BuyNowButton(card: card),
+          BuyNowButton(card: card),
         ],
       ),
     );
@@ -61,10 +61,7 @@ class BuyNowButton extends StatelessWidget {
       ),
       onPressed: () {
         String url = card.url;
-        //launchURL(url);
         launchURL3(url);
-        //launchURL2(url);
-
       },
       child: Text(
         'Buy Now',

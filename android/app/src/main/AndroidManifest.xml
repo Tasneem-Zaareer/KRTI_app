@@ -16,7 +16,7 @@
             <data android:scheme="tel" />
         </intent>
     </queries>
-    <application
+       <application
         android:label="KRTI"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">

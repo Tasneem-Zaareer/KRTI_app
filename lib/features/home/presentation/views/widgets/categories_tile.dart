@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../models/card_model.dart';
 import '../../models/lists/wedding_cart_menu.dart';
-import '../category_items_list.dart';
+import '../items_list_view.dart';
 
 class CategoriesTile extends StatelessWidget {
   const CategoriesTile({super.key, required this.category});
@@ -19,7 +19,7 @@ class CategoriesTile extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return CategoryItemsList(menu: category.cartList,);
+                  return ItemsListView(menu: category.cartList,);
 
                   // return CategoryItemsList(menu: category.giftList,);
                 },

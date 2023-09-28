@@ -4,7 +4,7 @@ import 'package:krti_app/features/home/presentation/models/lists/categories_menu
 import 'package:krti_app/features/home/presentation/models/lists/dad_menu.dart';
 import 'package:krti_app/features/home/presentation/models/lists/graduation_menu.dart';
 import 'package:krti_app/features/home/presentation/models/lists/wedding_cart_menu.dart';
-import 'package:krti_app/features/home/presentation/views/category_items_list.dart';
+import 'package:krti_app/features/home/presentation/views/items_list_view.dart';
 import 'package:krti_app/features/home/presentation/views/widgets/categories_list.dart';
 
 import '../../../../about_us/presentation/views/about_us.dart';
@@ -23,17 +23,17 @@ class HomeDrawer extends StatelessWidget {
            DrawerListTile(
             title: 'Wedding Cards',
             icon: Icons.people_alt_rounded,
-            pageName: CategoryItemsList(menu: weddingCardMenu),
+            pageName: ItemsListView(menu: weddingCardMenu),
           ),
           DrawerListTile(
             title: 'Graduation Cards',
             icon: Icons.card_giftcard,
-            pageName: CategoryItemsList(menu: graduationCardMenu),
+            pageName: ItemsListView(menu: graduationCardMenu),
           ),
           DrawerListTile(
             title: 'Dad Cards',
             icon: Icons.card_giftcard,
-            pageName: CategoryItemsList(menu: dadCardMenu),
+            pageName: ItemsListView(menu: dadCardMenu),
           ),
 
         ],
