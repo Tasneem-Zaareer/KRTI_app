@@ -25,8 +25,8 @@ class ProductDetailsPage extends StatelessWidget {
 
                 children: [
                   ProductImage(card: card),
-                  const ProductRate(),
-                  const ProductName(),
+                  //const ProductRate(),
+                  //const ProductName(),
                   const SizedBox(height: 25),
                   const Description(),
                   const SizedBox(height: 10),

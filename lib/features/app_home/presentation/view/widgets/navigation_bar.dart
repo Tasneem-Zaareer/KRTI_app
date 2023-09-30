@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:krti_app/features/about_us/presentation/views/about_us.dart';
 import '../../../../home/presentation/models/lists/categories_menu.dart';
+import '../../../../home/presentation/models/lists/categories_menu_all.dart';
 import '../../../../home/presentation/views/home_view.dart';
-import '../../../../home/presentation/views/widgets/horizontal_list.dart';
 import '../../../../home/presentation/views/widgets/categories_list.dart';
 
 class HomeNavigationBar extends StatefulWidget {
@@ -20,7 +20,7 @@ class _HomeNavigationBarState extends State<HomeNavigationBar> {
     //best seller page
     //const HorizontalListView(menu: [],),
     //categories page
-    CategoriesList(menu: categoriesMenu),
+    CategoriesList(menu: categoriesMenuAll),
     //unique ideas
     const AboutUs(),
   ];

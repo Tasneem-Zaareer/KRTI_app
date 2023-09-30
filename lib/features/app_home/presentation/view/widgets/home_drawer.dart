@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:krti_app/features/app_home/presentation/view/app_home.dart';
-import 'package:krti_app/features/home/presentation/models/lists/categories_menu.dart';
 import 'package:krti_app/features/home/presentation/models/lists/dad_menu.dart';
 import 'package:krti_app/features/home/presentation/models/lists/graduation_menu.dart';
 import 'package:krti_app/features/home/presentation/models/lists/wedding_cart_menu.dart';
 import 'package:krti_app/features/home/presentation/views/items_list_view.dart';
-import 'package:krti_app/features/home/presentation/views/widgets/categories_list.dart';
-
-import '../../../../about_us/presentation/views/about_us.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({super.key});

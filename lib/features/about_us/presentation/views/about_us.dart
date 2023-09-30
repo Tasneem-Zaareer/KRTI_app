@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:krti_app/features/home/presentation/views/widgets/app_bar.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});

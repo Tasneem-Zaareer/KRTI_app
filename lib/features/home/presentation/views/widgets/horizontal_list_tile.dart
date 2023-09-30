@@ -83,6 +83,7 @@ class BuyNowButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: kPaintingColor,
+
       ),
       onPressed: () {
         String url = card.url;

@@ -8,15 +8,35 @@ class Description extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Row(
+          children: [
+
+            Text(
+              'Do you like this card?',
+              style: TextStyle(
+                color: Colors.deepPurple.shade400,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
         const Text(
-          "Do you like this card and want to know more details about it such as price, how it looks inside and many more?",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          "If you want to know more details about this amazing card such as:"
+          "\n● Price\n● How it looks inside?\n● Colors and many more",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         SizedBox(
           height: 10,
         ),
         Text(
-          'COOL! All you need is to press to the button bellow and you can buy it on Amazon',
+          'ALL YOU NEED is to press to the button bellow so you can buy it on Amazon.',
           style: TextStyle(
             fontSize: 18,
           ),
@@ -26,7 +46,7 @@ class Description extends StatelessWidget {
         ),
         Text(
           'As simple as that!',
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 18,)
         ),
         // Text(
         //   "Description is here you know that you can buy best gift for your mom dad sister from our store Description is here you "

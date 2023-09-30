@@ -2,6 +2,11 @@ import '../card_model.dart';
 
 List birthdayCardMenu = [
   MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/81MHjCO6N3L._AC_SX679_.jpg',
+    name: '',
+    url: 'https://amzn.to/455xp0V',
+  ),
+  MyCard(
     imagePath: 'https://m.media-amazon.com/images/I/91eECU7rdUL._AC_SX569_.jpg',
     name: '',
     url: 'https://amzn.to/3RAcboP',
@@ -26,4 +31,5 @@ List birthdayCardMenu = [
     name: '',
     url: 'https://amzn.to/3LxtL9a',
   ),
+
 ];

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../constants.dart';
 
 class AnnouncementBar extends StatelessWidget {
@@ -15,6 +14,6 @@ class AnnouncementBar extends StatelessWidget {
       color: kPaintingColor,
       child: const Text('Mom u mean the world to me'),
     ),
-  );const Placeholder();
+  );
   }
 }

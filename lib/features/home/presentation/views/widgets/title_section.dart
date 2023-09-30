@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:krti_app/features/home/presentation/models/card_model.dart';
-
-import '../../models/lists/wedding_cart_menu.dart';
 import '../items_list_view.dart';
 
 class TitleSection extends StatelessWidget {

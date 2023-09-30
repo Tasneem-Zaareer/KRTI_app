@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../models/lists/categories_menu.dart';
 import 'categories_tile.dart';
 
 class CategoriesList extends StatelessWidget {

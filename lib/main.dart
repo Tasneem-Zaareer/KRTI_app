@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'features/splash_view/presentation/view/splash_view.dart';
 
 void main() {
@@ -11,15 +12,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'KRTI',
-        theme: ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white),
+        theme: ThemeData.light().copyWith(
+          scaffoldBackgroundColor: Colors.white,
+          textTheme: GoogleFonts.rubikTextTheme().apply(bodyColor: Colors.grey.shade800),
+
+
+
+
+        ),
         home: const Scaffold(
           body: SplashView(),
-        )
-    );
+        ));
   }
 }
-
-
