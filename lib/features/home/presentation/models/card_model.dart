@@ -9,11 +9,14 @@ class MyCard {
 class Category {
   late String imagePath;
   late String name;
-  late List cartList;
+  late List cardList;
 
   // Category({required this.imagePath,required this.name,required this.giftList});
-  Category(
-      {required this.imagePath, required this.name, required this.cartList});
+  Category({
+    required this.imagePath,
+    required this.name,
+    required this.cardList,
+  });
 }
 
 // class Category {

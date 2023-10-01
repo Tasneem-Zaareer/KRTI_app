@@ -36,7 +36,7 @@ class GoToItemsListView extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ItemsListView(menu: category.cartList,);
+              return ItemsListView(menu: category.cardList,);
 
               // return CategoryItemsList(menu: category.giftList,);
             },

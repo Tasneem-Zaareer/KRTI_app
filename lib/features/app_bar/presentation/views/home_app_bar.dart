@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../constants.dart';
-import '../../../../about_us/presentation/views/about_us.dart';
+import '../../../../constants.dart';
+import '../../../about_us/presentation/views/about_us.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});

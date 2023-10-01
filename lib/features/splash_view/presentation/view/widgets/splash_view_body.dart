@@ -10,16 +10,27 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> {
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
+  late Animation<Offset> slidingAnimation;
+
   @override
   initState() {
     super.initState();
-    timerPageNavigator();
+    slidingAnimationFun();
+    //timerPageNavigator();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -33,13 +44,36 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 50),
         ),
-        const Text(
-          ' Best & Unique Greeting Cards',
-          textAlign: TextAlign.center,
-        ),
+        AnimatedBuilder(
+            animation: slidingAnimation,
+            builder: (context, _) {
+              return SlideTransition(
+                position: slidingAnimation,
+                child: Text(
+                  ' Best & Unique Greeting Cards',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      // color: Colors.deepPurple.shade300,
+                      // fontWeight: FontWeight.bold,
+                      // fontSize: 60,
+                      ),
+                ),
+              );
+            }),
       ],
     );
+  }
 
+  void slidingAnimationFun() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 700),
+    );
+    slidingAnimation = Tween<Offset>(
+      begin: const Offset(0, 6),
+      end: const Offset(0, 0),
+    ).animate(animationController);
+    animationController.forward();
   }
 
   void timerPageNavigator() {

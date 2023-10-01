@@ -10,55 +10,62 @@ class Description extends StatelessWidget {
       children: [
         Row(
           children: [
-
+            Icon(
+              Icons.star_rate,
+              color: Colors.yellow.shade700,
+              size: 26,
+            ),
             Text(
-              'Do you like this card?',
+              ' Do you like this card?',
               style: TextStyle(
-                color: Colors.deepPurple.shade400,
+                color: Colors.deepPurple.shade300,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ],
         ),
-        SizedBox(
-          height: 10,
-        ),
-        const Text(
-          "If you want to know more details about this amazing card such as:"
-          "\n● Price\n● How it looks inside?\n● Colors and many more",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
+        SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.only(left: 30.0, right: 25),
+          child: Column(
+            children: [
+              const Text(
+                "If you want to know more details about this amazing card such as:"
+                "\n● Price\n● How it looks inside?\n● Colors and many more",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'ALL YOU NEED is to press the button bellow so you can buy it on Amazon.',
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(height: 25),
+              Row(
+                children: [
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.deepPurple.shade400,
+                    size: 16,
+                  ),
+                  Text(
+                    ' As simple as that!',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-          'ALL YOU NEED is to press to the button bellow so you can buy it on Amazon.',
-          style: TextStyle(
-            fontSize: 18,
-          ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-          'As simple as that!',
-          style: TextStyle(fontSize: 18,)
-        ),
-        // Text(
-        //   "Description is here you know that you can buy best gift for your mom dad sister from our store Description is here you "
-        //       "know that you can buy best gift for your mom dad sister from our"
-        //       " store is here you know that you can buy best "
-        //       "gift for your mom dad sister from our store is here "
-        //       "you know that you can buy best gift for your mom dad"
-        //       " sister from our store you know that you can buy best "
-        //       "gift for your mom dad you know that you can buy best gift for your mom dad"
-        //       "you know that you can buy best gift for your mom dad you know that you can buy best gift for your mom dad",
-        //   style: TextStyle(color: Colors.grey[700], height: 2),
-        // ),
+        )
       ],
     );
   }

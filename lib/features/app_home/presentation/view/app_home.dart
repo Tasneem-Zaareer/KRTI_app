@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:krti_app/features/app_home/presentation/view/widgets/home_app_bar.dart';
-import 'package:krti_app/features/app_home/presentation/view/widgets/home_drawer.dart';
+import 'package:krti_app/features/app_bar/presentation/views/home_app_bar.dart';
+import 'package:krti_app/features/drawer/presentation/views/home_drawer.dart';
 
 
-import 'widgets/navigation_bar.dart';
+import '../../../navigation_bar/presentation/views/navigation_bar.dart';
 
 class AppHome extends StatelessWidget {
   const AppHome({super.key});

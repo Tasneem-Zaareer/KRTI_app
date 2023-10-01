@@ -20,13 +20,13 @@ class ProductDetailsPage extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: ListView(
 
                 children: [
                   ProductImage(card: card),
                   //const ProductRate(),
-                  //const ProductName(),
+                  // const ProductName(),
                   const SizedBox(height: 25),
                   const Description(),
                   const SizedBox(height: 10),

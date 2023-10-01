@@ -1,4 +1,4 @@
-import '../card_model.dart';
+import '../../../features/home/presentation/models/card_model.dart';
 
 List funnyCardMenu = [
   MyCard(

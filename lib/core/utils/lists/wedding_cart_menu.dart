@@ -1,34 +1,8 @@
-import '../card_model.dart';
+import '../../../features/home/presentation/models/card_model.dart';
 
 List weddingCardMenu = [
   MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/816YynbBElL._AC_SX522_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/71Ti-C+7xaL._AC_SY355_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/91xh6oKyDNL._AC_SX522_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/81boVYYXTgL._AC_SX522_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/91-FeY9S8uL._AC_SX522_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
-
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/71OuBXIJ6IL._AC_SX522_.jpg',
+    imagePath: 'https://m.media-amazon.com/images/I/91A3AaLYhjL._AC_SX522_.jpg',
     name: '',
     url: 'https://amzn.to/3RuRwm1',
   ),
@@ -44,6 +18,38 @@ List weddingCardMenu = [
   ),
   MyCard(
     imagePath: 'https://m.media-amazon.com/images/I/71awx-g2mQL._AC_SX522_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/816YynbBElL._AC_SX522_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/71Ti-C+7xaL._AC_SY355_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/91xh6oKyDNL._AC_SX522_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/81boVYYXTgL._AC_SX522_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/91-FeY9S8uL._AC_SX522_.jpg',
+    name: '',
+    url: 'https://amzn.to/3RuRwm1',
+  ),
+  MyCard(
+    imagePath: 'https://m.media-amazon.com/images/I/71OuBXIJ6IL._AC_SX522_.jpg',
     name: '',
     url: 'https://amzn.to/3RuRwm1',
   ),
@@ -99,11 +105,7 @@ List weddingCardMenu = [
     name: '',
     url: 'https://amzn.to/3RuRwm1',
   ),
-  MyCard(
-    imagePath: 'https://m.media-amazon.com/images/I/91A3AaLYhjL._AC_SX522_.jpg',
-    name: '',
-    url: 'https://amzn.to/3RuRwm1',
-  ),
+
 
 
 ];

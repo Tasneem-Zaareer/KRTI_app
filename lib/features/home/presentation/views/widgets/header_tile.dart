@@ -12,7 +12,7 @@ class HeaderTile extends StatelessWidget {
       padding: const EdgeInsets.only(right: 12),
       child: Container(
         // width: 200,
-        width: MediaQuery.of(context).size.width * .7,
+        width: MediaQuery.of(context).size.width * .77,
 
         decoration: BoxDecoration(
           color: Colors.yellow,
