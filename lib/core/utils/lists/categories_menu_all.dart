@@ -53,28 +53,6 @@ List categoriesMenuAll = [
     cardList: kidsCardMenu,
   ),
 
-  Category(
-    imagePath:
-    'https://m.media-amazon.com/images/I/71X3DrJU01L._AC_SY879_.jpg',
-    name: 'Mom',
-    cardList: momCardMenu,
-  ),
-  Category(
-    imagePath:
-    'https://m.media-amazon.com/images/I/61D4aaGgVaL._AC_SX679_.jpg',
-    name: 'Couples',
-    cardList: couplesCardMenu,
-  ),
-  Category(
-    imagePath: 'https://m.media-amazon.com/images/I/91IEUyezCXL._AC_SX679_.jpg',
-    name: 'Kids',
-    cardList: kidsCardMenu,
-  ),
-  Category(
-    imagePath:
-    'https://m.media-amazon.com/images/I/712P6OnazPL._AC_SL1500_.jpg',
-    name: 'Dad',
-    cardList: dadCardMenu,
-  ),
+
 ];
 

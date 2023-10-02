@@ -15,13 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'KRTI',
-        theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: Colors.white,
-          textTheme: GoogleFonts.rubikTextTheme().apply(bodyColor: Colors.grey.shade800),
-
-
-
-
+        //theme: ThemeData ().copyWith(
+      theme: ThemeData.light().copyWith(
+      scaffoldBackgroundColor: Colors.white,
+          textTheme: GoogleFonts.rubikTextTheme()
+              .apply(bodyColor: Colors.grey.shade800),
         ),
         home: const Scaffold(
           body: SplashView(),

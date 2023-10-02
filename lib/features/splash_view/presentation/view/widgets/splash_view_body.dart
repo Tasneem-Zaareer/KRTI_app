@@ -19,7 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   initState() {
     super.initState();
     slidingAnimationFun();
-    //timerPageNavigator();
+    timerPageNavigator();
   }
 
   @override

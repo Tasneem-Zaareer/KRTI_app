@@ -10,10 +10,10 @@ class AboutUs extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Image.asset('assets/images/4.jpg'),
+            Image.asset('assets/images/0.png'),
             const Expanded(
               child: Padding(
-                padding: EdgeInsets.all(12.0),
+                padding: EdgeInsets.all(30),
                 child: Text(
                   'Our app  is a participant in the Amazon Services LLC Associates Program,'
                   ' an affiliate advertising program.\n',
