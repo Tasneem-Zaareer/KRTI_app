@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../app_home/presentation/view/app_home.dart';
+import '../../../login/presentation/views/login_view.dart';
 import 'intro_page_1.dart';
 import 'intro_page_2.dart';
 import 'intro_page_3.dart';
@@ -46,25 +47,24 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   },
                   child: Text('skip'),
                 ),
-                onLastPage? GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) {
-                              return const AppHome();
-                            }));
-                  },
-                  child: Text('let\'s go'),
-                )
-                : GestureDetector(
-                  onTap: () {
-                    _controller.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  child: Text('next'),
-                ),
+                onLastPage
+                    ? GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const LoginView();
+                          }));
+                        },
+                        child: Text('let\'s go'),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          _controller.nextPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                        child: Text('next'),
+                      ),
               ],
             ),
           )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:krti_app/features/login/presentation/views/login_view.dart';
 import 'package:krti_app/features/on_boarding_screen/presentation/views/on_boarding_page.dart';
 import 'features/splash_view/presentation/view/splash_view.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         ),
         home: const Scaffold(
           // body: SplashView(),
-          body: OnBoardingScreen(),
+          //body: OnBoardingScreen(),
+          body: LoginView(),
 
         ));
   }
