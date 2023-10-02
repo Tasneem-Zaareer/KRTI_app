@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:krti_app/features/login/presentation/views/register_view.dart';
 import 'package:krti_app/features/login/presentation/views/widgets/button.dart';
 import 'package:krti_app/features/login/presentation/views/widgets/text_field.dart';
-
 import '../../../app_home/presentation/view/app_home.dart';
 
 class LoginView extends StatelessWidget {
@@ -104,9 +103,15 @@ class LoginView extends StatelessWidget {
 
                   Row(
                     children: [
-                      Expanded(child: Divider()),
+                      Expanded(child: Divider(
+                        thickness: 1,
+                        color: Colors.grey.shade300,
+                      ),),
                       const Text('Or'),
-                      Expanded(child: Divider()),
+                      Expanded(child: Divider(
+                        thickness: 1,
+                        color: Colors.grey.shade300,
+                      ),),
                     ],
                   ),
                   GestureDetector(
