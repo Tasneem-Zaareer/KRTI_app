@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:krti_app/features/home/presentation/models/card_model.dart';
 import 'package:krti_app/features/home/presentation/views/widgets/categories_list.dart';
+import 'package:krti_app/features/login/presentation/views/widgets/text_field.dart';
 import '../../../../core/utils/lists/categories_menu_all.dart';
 import '../../../about_us/presentation/views/about_us.dart';
 
@@ -11,22 +12,41 @@ class SearchSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        showSearch(context: context, delegate: HomeSearch());
-      },
-      icon: const Icon(Icons.search),
+    return Row(
+      children: [
+        Container(
+
+        ),
+        // Padding(
+        //   padding: const EdgeInsets.only(left: 8.0,top: 10),
+        //   child: SizedBox(
+        //     width: 330,
+        //     child: MyTextField(
+        //       hintText: 'Search',
+        //       label: '',
+        //       obscureText: false,
+        //       mySuffixIcon: Icons.clear,
+        //     ),
+        //   ),
+        // ),
+        IconButton(
+          onPressed: () {
+            showSearch(
+              context: context,
+              delegate: HomeSearch(),
+            );
+          },
+          icon: const Icon(Icons.search),
+        ),
+      ],
     );
   }
 }
 
 class HomeSearch extends SearchDelegate {
-  //String name = '';
-  //late Category category = categoriesMenuAll[1];
   List menu = categoriesMenuAll;
   late Category test;
 
-  //String name = test.name;
   List? filterList;
   List categories = ['pots', 'shoes', 'tools', 'lights'];
 

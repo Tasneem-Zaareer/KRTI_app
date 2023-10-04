@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.1.14
   cached_network_image: ^3.3.0
   google_fonts: ^6.1.0
+  firebase_core: ^2.17.0
 
 
 

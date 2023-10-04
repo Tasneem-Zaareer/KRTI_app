@@ -12,6 +12,7 @@ import '../../../../core/utils/lists/graduation_menu.dart';
 import '../../../../core/utils/lists/kids_menu.dart';
 import '../../../../core/utils/lists/mom_menu.dart';
 import '../../../../core/utils/lists/wedding_cart_menu.dart';
+import '../../../search/presentation/views/search_view.dart';
 
 
 class HomeView extends StatefulWidget {

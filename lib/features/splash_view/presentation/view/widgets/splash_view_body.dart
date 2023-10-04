@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:krti_app/features/on_boarding_screen/presentation/views/on_boarding_page.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../app_home/presentation/view/app_home.dart';
 
@@ -82,7 +83,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       () {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-            builder: (_) => const AppHome(),
+            builder: (_) => const OnBoardingScreen(),
           ),
         );
       },

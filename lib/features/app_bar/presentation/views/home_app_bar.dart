@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:krti_app/features/search/presentation/views/search_view.dart';
 import '../../../../constants.dart';
 import '../../../about_us/presentation/views/about_us.dart';
 
@@ -22,7 +23,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions:  [
         Padding(
           padding: const EdgeInsets.only(top: 8.0,right: 8),
-          child: Image.asset('assets/images/invitation.png',width: 50,),
+          child: SearchSection(),
+          //child: Image.asset('assets/images/invitation.png',width: 50,),
         ),
         //AppIconButton(iconButton:  Icons.search,),
         //AppIconButton(iconButton:  Icons.info_outline,),

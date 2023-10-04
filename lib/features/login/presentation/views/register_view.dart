@@ -25,7 +25,7 @@ class RegisterView extends StatelessWidget {
                   //     height: 250),
                   Image.asset(
                     'assets/images/icon3.png',
-                    height: 150,
+                    height: 100,
                   ),
                   const SizedBox(height: 10),
                   Text(
