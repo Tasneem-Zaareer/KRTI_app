@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "268017860757",
+    "project_id": "krti-app",
+    "storage_bucket": "krti-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268017860757:android:b6cfef4c0d4d5d9b849b9c",
+        "android_client_info": {
+          "package_name": "com.example.krti_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO7LmHoLNCkCbH_tos9fpVoq0WmIFg3Hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

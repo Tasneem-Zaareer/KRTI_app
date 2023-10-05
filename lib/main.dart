@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'features/login/presentation/views/login_view.dart';
 import 'features/splash_view/presentation/view/splash_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -28,9 +30,9 @@ class MyApp extends StatelessWidget {
               .apply(bodyColor: Colors.grey.shade800),
         ),
         home: const Scaffold(
-          body: SplashView(),
+          // body: SplashView(),
           //body: OnBoardingScreen(),
-          // body: LoginView(),
+          body: LoginView(),
         ));
   }
 }
