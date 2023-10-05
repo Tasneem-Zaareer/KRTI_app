@@ -21,7 +21,6 @@ class RegisterView extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 50),
-
                 // Lottie.network(
                 //     'https://lottie.host/6649afa9-8386-46d9-b323-0f988f08c0d0/84f1nT8Ihc.json',
                 //     height: 250),
@@ -67,27 +66,21 @@ class RegisterView extends StatelessWidget {
 
                 const SizedBox(height: 30),
                 MyButton(
-                  text: 'Register',
-                  onTap: () async {
-                    try{
-                      if (passwordController.text ==
-                          confirmPasswordController.text) {
-                        await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                          email: emailController.text,
-                          password: passwordController.text,
+                    onTap: () async {
+                      try {
+                        await registerUser(
+                          passwordController,
+                          confirmPasswordController,
+                          emailController,
+                          context,
                         );
-                        showSnackBar(context, 'Bravo, Now login to start');
-                      }
-                      else{
-                        showSnackBar(context, 'Oops! Password does not match!');
-                      }
-                    }
-                    on FirebaseAuthException catch (e){
-                      showSnackBar(context, e.code);
-                    }
 
 
-                  }
+                      } on FirebaseAuthException catch (e) {
+                        showSnackBar(context, e.code,Colors.redAccent);
+                      }
+                    },
+                  text: 'Register',
                 ),
                 const SizedBox(height: 10),
                 Row(
@@ -96,15 +89,7 @@ class RegisterView extends StatelessWidget {
                     const Text('Already have an account? '),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              // return HomeTab();
-                              return const LoginView();
-                            },
-                          ),
-                        );
+                        navigateToLoginPage(context);
                       },
                       child: Text(
                         'Login now',
@@ -159,14 +144,44 @@ class RegisterView extends StatelessWidget {
     );
   }
 
-  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(
-    context,
+  void navigateToLoginPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          // return HomeTab();
+          return const LoginView();
+        },
+      ),
+    );
+  }
+
+  Future<void> registerUser(
+      TextEditingController passwordController,
+      TextEditingController confirmPasswordController,
+      TextEditingController emailController,
+      BuildContext context) async {
+    if (passwordController.text == confirmPasswordController.text) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+      showSnackBar(context, 'Bravo, Now login to start',Colors.greenAccent);
+      navigateToLoginPage(context);
+    } else {
+      showSnackBar(context, 'Oops! Password does not match!',Colors.redAccent);
+    }
+  }
+
+  void showSnackBar(
+    BuildContext context,
     String message,
+    Color color,
   ) {
-    return ScaffoldMessenger.of(context).showSnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
-        backgroundColor: Colors.redAccent.shade200,
+        content: Text(message,style: TextStyle(color: Colors.white),),
+        backgroundColor: color,
       ),
     );
   }
