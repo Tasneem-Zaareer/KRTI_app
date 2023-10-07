@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'features/login/presentation/views/auth_page.dart';
 import 'features/login/presentation/views/login_view.dart';
 import 'features/splash_view/presentation/view/splash_view.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
         home: const Scaffold(
           // body: SplashView(),
           //body: OnBoardingScreen(),
-          body: LoginView(),
-        ));
+          // body: LoginView(),
+          body: AuthPage(),
+        ),
+    );
   }
 }
